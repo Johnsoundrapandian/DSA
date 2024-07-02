@@ -1,0 +1,16 @@
+import java.util.Scanner;
+public class Num_RevNum_Diff{
+	public static void main(String[] args){
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter the Number : ");
+		int c = scanner.nextInt();
+                int copy = c,rev = 0;
+		while(copy != 0){
+			int rem = copy%10;
+			rev = rev*10+rem;
+			copy/=10;
+		}
+		System.out.println(c-rev);
+                
+	}
+}
