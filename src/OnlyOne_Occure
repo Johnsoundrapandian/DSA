@@ -1,0 +1,42 @@
+import java.util.Scanner;
+
+import java.util.*;
+
+class OnlyOne_Occure {
+
+    public static void main(String[] args) {
+
+        Scanner scanner= new Scanner(System.in);
+
+         System.out.print("enter the String : ");
+
+         String str = scanner.nextLine();
+
+         //str = str.toLowerCase();
+
+         char[] a = str.toCharArray();
+
+         
+         int count =0;
+
+         for(int i =0 ; i <a.length; i++){
+
+             count=1;
+
+            for(int j =0 ; j <a.length; j++){
+
+                if(a[i]==a[j] && j!=i) count++;
+
+            }
+
+            if(count==1) {System.out.println(a[i]);
+
+                break;
+
+            }
+
+        }
+
+    }
+
+}
