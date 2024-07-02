@@ -1,0 +1,78 @@
+import java.util.Scanner;
+
+import java.util.*;
+
+class TotalInt_TotalDiffVal_OccureOnce {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter Array Size :");
+ 
+        int size  = scanner.nextInt();
+   
+        int[] arr = new int[size];
+
+        for(int i =0 ; i<size;i++){
+
+            System.out.print("Enter "+(i+1)+"th Element :");
+
+            arr[i] = scanner.nextInt();
+
+            System.out.println();
+
+        }
+
+        
+System.out.println(totalInt_TotalDiffVal_OccureOnce(arr));
+
+    }
+
+    static List<Integer> totalInt_TotalDiffVal_OccureOnce(int[] nums){
+
+         List<Integer>al = new ArrayList<>();
+
+         Set<Integer>set = new HashSet<>();
+
+        //Arrays.sort(nums);
+
+        for(int i = 0; i<nums.length;i++){
+
+            set.add(nums[i]);
+
+            }
+ 
+
+       
+        int count = 0,found =0;
+
+        for(int i =0 ;i<nums.length;i++){
+
+            count =1;
+
+            for(int j =0 ;j<nums.length;j++){
+
+                if(i!=j && nums[i]==nums[j]){
+ 
+                   count++;
+
+                }
+ 
+           }
+  
+          if(count ==1) found++;
+
+        }
+
+        al.add(nums.length);
+ 
+        al.add(set.size());
+ 
+        al.add(found);
+  
+        return al;
+
+    }
+
+}
