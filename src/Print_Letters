@@ -1,0 +1,24 @@
+import java.util.Scanner;
+public class Print_Letters{
+	public static void main(String[] args){
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter the character : ");
+		char c = scanner.next().charAt(0);
+                if(c>='a' && c<='z'){
+			for(char i =c ; i <= 'z' ; i++){
+				System.out.print(i);
+			}
+		}
+                else if(c>='A' && c<='Z'){
+			for(char i =c ; i <= 'Z' ; i++){
+				System.out.print(i);
+			}
+		}
+		else if(c>='0' && c<='9'){
+			for(char i =c ; i <= '9' ; i++){
+				System.out.print(i);
+			}
+		}
+		else System.out.println("invalid character");
+	}
+}
