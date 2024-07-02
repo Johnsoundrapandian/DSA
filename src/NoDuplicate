@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+import java.util.*;
+
+class NoDuplicate {
+
+    public static void main(String[] args) {
+
+        Scanner scanner= new Scanner(System.in);
+
+         System.out.print("enter the String : ");
+
+         String str = scanner.nextLine();
+
+         char[] a = str.toCharArray();
+
+
+         Arrays.sort(a);
+
+         Set<Character>set=new HashSet<>();
+
+         for(int i =0 ; i <a.length-1; i++){
+
+            if(a[i]==a[i+1]){
+
+               set.add(a[i]);
+ 
+            }
+
+        }
+
+         System.out.println(set);
+
+    }
+
+}
