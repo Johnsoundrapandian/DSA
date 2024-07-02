@@ -1,0 +1,40 @@
+import java.util.Scanner;
+public class Based_Alphabate{
+	public static void main(String[] args){
+        	Scanner scanner =new Scanner(System.in);
+                System.out.print("Enter character");
+                char op = scanner.next().charAt(0);
+                if(op>='A' && op<='Z'){
+                   int n =op-'A'+1;
+                   for(int i = 0;i<n;i++){
+                       for(int j =0 ; j<n-i;j++){
+                           System.out.print(op);
+                       }
+                        op--;
+                       System.out.println();
+                  }
+               }
+               else if(op>='a' && op<='z'){
+                   int n =op-'a'+1;
+                   for(int i = 0;i<n;i++){
+                       for(int j =0 ; j<n-i;j++){
+                           System.out.print(op);
+                       }
+                        op--;
+                       System.out.println();
+                  }
+               }
+               else if(op>='0' && op<='9'){
+                   int n =op-'0';
+                   for(int i = 0;i<n;i++){
+                       for(int j =0 ; j<n-i;j++){
+                           System.out.print(op);
+                       }
+                        op--;
+                       System.out.println();
+                  }
+               }
+               else System.out.println("invalid character ");        
+		
+        }
+}
