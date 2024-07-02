@@ -1,0 +1,10 @@
+import java.util.Scanner;
+import java.util.*;
+public class Print_Number_Without_String{
+	public static void main (String[] args){
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Eneter the decimal Number");
+		double d  = scanner.nextDouble();
+                System.out.printf("%.2f",d);
+	}
+}
