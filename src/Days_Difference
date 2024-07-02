@@ -1,0 +1,121 @@
+import java.util.*;
+
+import java.util.Scanner;
+
+class Days_Difference {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Enter start date : ");
+
+        String a= scanner.nextLine();
+
+        System.out.println("Enter end date : ");
+
+        String b= scanner.nextLine();
+
+       
+ int[] date = {31,28,31,30,31,30,31,31,30,31,30,31};
+
+        String[] month={"janavary","febravary","march","april","may","june","july","august","september","augtober","november","december"};
+
+        int year1 = Integer.parseInt(a.substring(a.length()-4,a.length()));
+
+        int year2 = Integer.parseInt(b.substring(b.length()-4,b.length()));
+
+        int count= 0;
+        int to = 0;
+
+        int d1 = Integer.parseInt(a.substring(0,2));
+
+        int d2 = Integer.parseInt(b.substring(0,2));
+
+        
+String c = a.substring(3,a.length()-5);
+
+        String d = b.substring(3,b.length()-5);
+
+        int start = check(c,month);
+
+        int last = check(d,month);
+
+        int d3 = date[start],d4=date[last];
+
+        for(int j =year1;j<=year2;j++){
+
+            int x=0,y=11;
+
+            if(j%400==0){
+
+                date[1]=29;
+
+                count++;
+
+            }
+ 
+            else if(j%4==0 && j%100!=0){
+
+                date[1]=29;
+
+                count++;
+
+            }
+ 
+           else date[1]=28;
+
+            if(year1==j) {
+
+                x=start;
+
+                 date[start] = date[start]-d1;
+
+            }
+
+            else date[start] = d3;
+
+            
+if(year2==j) {
+
+                y=last;
+
+                date[last] = d2;
+
+            }
+ 
+           for(int i = x;i<=y;i++){
+
+                to+=date[i];
+
+            }
+
+
+        }
+ 
+       
+ System.out.println(to);
+
+    }
+
+    static int check(String c,String[] month){
+
+        int start = 0;
+
+        for(int i=0; i<month.length;i++){
+
+            if(c.equals(month[i])){
+
+                start = i;
+
+                break;
+
+            }
+
+        }
+
+        return start;
+
+    }
+
+}
