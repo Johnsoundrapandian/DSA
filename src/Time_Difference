@@ -1,0 +1,107 @@
+import java.util.Scanner;
+
+import java.util.*;
+
+class Time_Difference {
+
+    public static void main(String[] args) {
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Enter Array Size :");
+
+        int size  = scanner.nextInt();
+
+        String[][] arr = new String[size][size];
+
+        String mty = scanner.nextLine();
+
+        for(int i =0 ; i<size;i++){
+
+            for(int j =0; j< size;j++){
+
+            System.out.print("Enter "+(i+1)+"th Element :");
+
+            arr[i][j] = scanner.nextLine();
+ 
+           System.out.println();
+ 
+           }
+ 
+       }
+ 
+       
+        System.out.println(time(arr));
+
+    }
+    static List<String> time(String[][] nums){
+ 
+       List<String>list = new ArrayList<>();
+ 
+       for(int i = 0; i< nums.length;i++){
+ 
+           int a =0,b=0;
+ 
+           for(int j= 0; j<nums.length;j++){
+
+                int k = 0,l = nums[i][j].length()-1;
+
+                int num1 = 0,num2 =0;
+ 
+              
+                String be = "";
+
+                while(nums[i][j].charAt(k)!=':'){
+
+                     if(nums[i][j].charAt(k)>='0' && nums[i][j].charAt(k)<='9'  ){
+
+                         num1 =num1*10+ nums[i][j].charAt(k)-'0';
+ 
+                        k++;
+  
+                   }
+   
+                  else return list;
+
+                }
+  
+              k++;
+ 
+               while(k<=l){
+  
+                   if(nums[i][j].charAt(k)>='0' && nums[i][j].charAt(k)<='9'  ){
+ 
+                        num2 =num2*10+ nums[i][j].charAt(k)-'0';
+    
+                     k++;
+    
+                 }
+ 
+                    else be += nums[i][j].charAt(k++)+"";
+ 
+               }
+       
+         if(num1==12 && be.equals("pm"))num1+=0;
+ 
+               else if(be.equals("pm")) num1+=12;
+
+               
+               a = Math.abs(num1-a);
+ 
+              b =Math.abs(num2-b);
+  
+          }
+ 
+           a = (a*60+b)/60;
+
+            b=(a*60+b)%60;
+ 
+           list.add(a+"."+b);
+
+        }
+ 
+       return list;
+ 
+   }
+ 
+ }
