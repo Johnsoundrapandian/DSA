@@ -1,0 +1,29 @@
+import java.util.Scanner;
+class EvenIndices{
+    public static void main(String[] args){
+         Scanner scanner= new Scanner(System.in);
+         System.out.print("array size : ");
+         int n = scanner.nextInt();
+         int[] a = new int[n];
+         for(int i =0 ; i <n; i++){
+             System.out.print("Enter "+(i+1)+"st  Element : ");
+             a[i] = scanner.nextInt();
+         }
+         int[] b = new int[n];
+         b = evenIndicies(a);
+         for(int i =0;i<n;i++){
+            System.out.print(b[i]+"\b");
+         }
+         
+    }
+    static int[] evenIndicies(int[] arr){
+       int[] b = new int[arr.length];
+       int j =0;
+       for(int i =0 ; i<n;i++){
+          if(i%2==0 && arr[i]%2==0){
+               b[j++] = arr[i];
+          }
+       }
+    return b;
+    }
+}
