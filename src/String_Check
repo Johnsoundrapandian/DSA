@@ -1,0 +1,19 @@
+import java.util.*;
+
+class String_Check {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        
+       /* System.out.println("Enter numerical value");
+        int option = input.nextInt();
+        input.nextLine(); // Consume the leftover newline character
+        
+        System.out.println("Enter 1st string");
+        String string1 = input.nextLine(); // Read 1st string
+        
+        System.out.println("Enter 2nd string");*/
+        String string2 = input.nextLine();
+        
+        System.out.println(string2 +"good boy");
+    }
+}
