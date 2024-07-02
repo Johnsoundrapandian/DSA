@@ -1,0 +1,74 @@
+import java.util.Scanner;
+
+import java.util.*;
+
+class Array_In_Array{
+
+	public static void main(String[] args){
+
+             Scanner scanner = new Scanner(System.in);
+ 
+             System.out.print("Enetr the 1st Array Size : ");
+
+	         int n1  = scanner.nextInt();
+
+             int[] arr1 = new int[n1];
+ 
+            for(int i =0 ; i<arr1.length;i++){
+
+		System.out.print("\nEnter the "+(i+1)+"th Element :");
+
+		arr1[i] = scanner.nextInt();
+
+             }
+ 
+            System.out.print("Enetr the 2nd Array Size : ");
+
+	         int n2  = scanner.nextInt();
+
+             int[] arr2 = new int[n2];
+
+             for(int i =0 ; i<arr2.length;i++){
+
+		System.out.print("\nEnter the "+(i+1)+"th Element :");
+
+		arr2[i] = scanner.nextInt();
+
+             }
+ 
+             System.out.println(check(arr1,arr2));
+
+	}
+
+	static boolean check(int[] arr1,int[]arr2){
+
+	     if(arr1.length<arr2.length) return false;
+	
+     int i =0 ,j=0;
+
+	     while(arr1.length>i && j<arr2.length){
+
+	          
+	         if(arr1[i]==arr2[0]){
+
+	            
+	             while(j<arr2.length){
+	
+            
+	             if(arr1[i++]!=arr2[j++]) return false;
+                             }
+
+	         }
+
+	         else if(arr1.length-i<arr2.length) return false;
+
+	         else i++;
+
+	                  
+	     }
+
+	     return true;
+
+	}
+
+}
