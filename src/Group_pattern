@@ -1,0 +1,41 @@
+import java.util.Scanner;
+
+public class Group_pattern {
+
+    public static void main(String[] args) {
+
+    	Scanner scanner = new Scanner(System.in);
+
+    	System.out.print("enter the number of students : ");
+
+    	int total_Student = scanner.nextInt();
+
+    	System.out.print("enter the group of class : ");
+
+    	int total_Class = scanner.nextInt();
+
+    	System.out.println();
+
+    	for(int i =0 ; i<total_Class;i++) {
+
+    		System.out.print("Class-"+(i+1)+"  ");
+
+    	}
+
+    	System.out.print("\n");
+
+    	for(int i = 1;i<=total_Student;i++) {
+
+    		if(i%total_Class!=0) {
+
+    			System.out.print("  "+(100+i)+"    ");
+
+    		}
+
+    		else System.out.print("  "+(100+i)+"\n");
+
+    	}
+
+    }
+
+}
