@@ -1,0 +1,12 @@
+import java.util.Scanner;
+import java.util.*;
+public class Concentrate_Circle{
+	public static void main (String[] args){
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter outer circle radius");
+		double oc  = scanner.nextDouble();
+		System.out.print("Enter inner circle radius");
+		double ic  = scanner.nextDouble();
+                System.out.printf("%.2f area %.2f circles distance",(3.14*oc*oc),(oc-ic));
+	}
+}
