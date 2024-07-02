@@ -1,0 +1,36 @@
+import java.util.Scanner;
+
+class OddPosition_EvenNumber{
+
+    public static void main(String[] args){
+
+         Scanner scanner= new Scanner(System.in);
+
+         System.out.print("array size : ");
+
+         int n = scanner.nextInt();
+
+         int[] a = new int[n];
+
+         for(int i =0 ; i <n; i++){
+
+             System.out.print("Enter "+(i+1)+"st  Element : ");
+
+             a[i] = scanner.nextInt();
+
+         }
+
+         for(int i =0 ; i<a.length;i++){
+
+           if(i%2==0 && a[i]%2==0){
+
+               System.out.print(a[i]+" ");
+
+           }
+
+        }
+
+    }
+
+
+}
