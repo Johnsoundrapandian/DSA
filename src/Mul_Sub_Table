@@ -1,0 +1,13 @@
+import java.util.Scanner;
+public class Mul_Sub_Table{
+	public static void main(String[] args){
+		Scanner scanner = new Scanner(System.in);
+		System.out.print("Enter the multiplication number : ");
+		int n = scanner.nextInt();
+                System.out.print("Enter the msubstraction number : ");
+		int n1 = scanner.nextInt();
+		for(int i =1 ; i <= 20 ; i++){
+			System.out.println(i+" *"+ n +"= "+(i*n)+"        "+i+" - "+n1 +"= "+(i-n1));
+		}
+	}
+}
